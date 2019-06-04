@@ -1,0 +1,2 @@
+To compile: nvcc -o transpose matrixTranspose.cu
+

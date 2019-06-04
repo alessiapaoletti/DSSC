@@ -1,0 +1,35 @@
+nthreads =  1
+Serial: res = 3.141593, time = 1.676443
+Reduction: res = 3.141593, time = 1.724095
+Atomic: res = 3.141593, time = 1.721969
+Critical: res = 3.141593, time = 1.724721
+
+nthreads =  2
+Serial: res = 3.141593, time = 1.690445
+Reduction: res = 3.141593, time = 0.860511
+Atomic: res = 3.141593, time = 0.859658
+Critical: res = 3.141593, time = 0.860843
+
+nthreads =  4
+Serial: res = 3.141593, time = 1.683408
+Reduction: res = 3.141593, time = 0.443260
+Atomic: res = 3.141593, time = 0.444259
+Critical: res = 3.141593, time = 0.444387
+
+nthreads =  8
+Serial: res = 3.141593, time = 1.673295
+Reduction: res = 3.141592, time = 0.234460
+Atomic: res = 3.141592, time = 0.234163
+Critical: res = 3.141592, time = 0.233641
+
+nthreads =  16
+Serial: res = 3.141593, time = 1.691421
+Reduction: res = 3.141592, time = 0.124440
+Atomic: res = 3.141592, time = 0.125060
+Critical: res = 3.141592, time = 0.124716
+
+nthreads =  20
+Serial: res = 3.141593, time = 1.691582
+Reduction: res = 3.141592, time = 0.144351
+Atomic: res = 3.141592, time = 0.145233
+Critical: res = 3.141592, time = 0.145332

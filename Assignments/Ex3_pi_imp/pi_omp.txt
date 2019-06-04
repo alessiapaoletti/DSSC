@@ -1,0 +1,15 @@
+threads  = 2
+Reduction: res = 3.141593, time = 0.848027
+Atomic: res = 3.141593, time = 0.844977
+threads  = 4
+Reduction: res = 3.141593, time = 0.436681
+Atomic: res = 3.141593, time = 0.435100
+threads  = 10
+Reduction: res = 3.141592, time = 0.191595
+Atomic: res = 3.141592, time = 0.190634
+threads  = 16
+Reduction: res = 3.141592, time = 0.121762
+Atomic: res = 3.141592, time = 0.121417
+threads  = 20
+Reduction: res = 3.141592, time = 0.098512
+Atomic: res = 3.141592, time = 0.097131threads  = 2 

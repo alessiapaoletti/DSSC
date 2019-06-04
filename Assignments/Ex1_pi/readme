@@ -1,0 +1,7 @@
+To compile use the Makefile. 
+
+Before running setting the environment variable OMP_NUM_THREADS is needed.
+
+The bash script pi.sh is used to run the program with number of threads equals to 1 2 4 8 16 20.
+
+In the res.txt file are reported the results obtained by running the script on Ulysses. 

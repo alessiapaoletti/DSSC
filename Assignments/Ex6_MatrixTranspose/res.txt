@@ -1,0 +1,11 @@
+Matrix size: 8192x8192, block: 32x2, nthreads: 64
+Naive bandwidth = 16.584970, time = 64.741859
+Fast bandwidth = 52.404644, time = 20.489441
+
+Matrix size: 8192x8192, block: 32x16, nthreads: 512
+Naive bandwidth = 58.557991, time = 18.336384
+Fast bandwidth = 101.959709, time = 10.531040
+
+Matrix size: 8192x8192, block: 32x32, nthreads: 1024
+Naive bandwidth = 75.474960, time = 14.226464
+Fast bandwidth = 81.969635, time = 13.099264

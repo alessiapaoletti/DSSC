@@ -1,0 +1,4 @@
+The codes implement a distributed intialization of an identity matrix, both in a sequential way (matrixSeq.c) and in a overlapping way (matrixOver.c). 
+
+To compile use the Makefile.
+When running the size of the matrix is requested as a parameter (the default is 4).    
