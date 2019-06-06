@@ -1,5 +1,5 @@
-* pi_mpi.c source code for MPI approximation of \pi 
-* pi_omp.c source code for OpenMP approximation of \pi 
+* pi_mpi.c source code for MPI approximation of pi  
+* pi_omp.c source code for OpenMP approximaton of pi
 * Makefile to compile both of them 
 * pi_mpi.txt results for MPI
 * pi_omp.txt results for OpenMP 
