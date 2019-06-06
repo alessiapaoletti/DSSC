@@ -1,2 +1,6 @@
-*pi.sh is the bash script to run the test
-*
+* pi_mpi.c source code for MPI approximation of \pi 
+* pi_omp.c source code for OpenMP approximation of \pi 
+* Makefile to compile both of them 
+* pi_mpi.txt results for MPI
+* pi_omp.txt results for OpenMP 
+* pi.sh is the bash script to run the test: MPI up to 40 np and OpenMP up to 20 threads. 
