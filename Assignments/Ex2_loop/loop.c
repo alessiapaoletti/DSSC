@@ -30,75 +30,75 @@ int main(int argc, char const *argv[]) {
   print_usage(a,N,nthreads); //visualize the result
 
   printf("\nStatic:\n");
-   #pragma omp parallel private(thread_id)
-   {
+  #pragma omp parallel private(thread_id)
+  {
      thread_id=omp_get_thread_num();
      int i;
      #pragma omp for schedule(static)
          for(i=0; i<N; i++){
            a[i]=thread_id;
          }
-   }
-   print_usage(a,N,nthreads);
+  }
+  print_usage(a,N,nthreads);
 
-   printf("\nStatic, chunck 1\n");
-   #pragma omp parallel private(thread_id)
-   {
+  printf("\nStatic, chunck 1\n");
+  #pragma omp parallel private(thread_id)
+  {
      thread_id=omp_get_thread_num();
      int i;
      #pragma omp for schedule(static,1)
        for(i=0; i<N; i++){
          a[i]=thread_id;
        }
-   }
-   print_usage(a,N,nthreads);
+  }
+  print_usage(a,N,nthreads);
 
-   printf("\nStatic, chunck 10\n");
-   #pragma omp parallel private(thread_id)
-   {
+  printf("\nStatic, chunck 10\n");
+  #pragma omp parallel private(thread_id)
+  {
      thread_id=omp_get_thread_num();
      int i;
      #pragma omp for schedule(static,10)
       for(i=0; i<N; i++){
         a[i]=thread_id;
       }
-  }
-  print_usage(a,N,nthreads);
+ }
+ print_usage(a,N,nthreads);
 
-  printf("\nDynamic:\n");
-  #pragma omp parallel private(thread_id)
-  {
+ printf("\nDynamic:\n");
+ #pragma omp parallel private(thread_id)
+ {
     thread_id=omp_get_thread_num();
     int i;
     #pragma omp for schedule(dynamic)
       for(i=0; i<N; i++){
         a[i]=thread_id;
       }
-  }
-  print_usage(a,N,nthreads);
+ }
+ print_usage(a,N,nthreads);
 
-  printf("\nDynamic, chunck 1:\n");
-  #pragma omp parallel private(thread_id)
-  {
+ printf("\nDynamic, chunck 1:\n");
+ #pragma omp parallel private(thread_id)
+ {
     thread_id=omp_get_thread_num();
     int i;
     #pragma omp for schedule(dynamic,1)
       for(i=0; i<N; i++){
         a[i]=thread_id;
       }
-  }
-  print_usage(a,N,nthreads);
+ }
+ print_usage(a,N,nthreads);
 
-  printf("\nDynamic, chunck 10:\n");
-   #pragma omp parallel private(thread_id)
-   {
+ printf("\nDynamic, chunck 10:\n");
+ #pragma omp parallel private(thread_id)
+ {
      thread_id=omp_get_thread_num();
      int i;
      #pragma omp for schedule(dynamic,10)
       for(i=0; i<N; i++){
        a[i]=thread_id;
       }
-   }
-   print_usage(a,N,nthreads);
-   return 0;
  }
+ print_usage(a,N,nthreads);
+ return 0;
+}
