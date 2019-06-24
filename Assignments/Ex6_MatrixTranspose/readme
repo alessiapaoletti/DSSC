@@ -1,5 +1,5 @@
 To compile: nvcc -o transpose matrixTranspose.cu
 
 
-Ref: https://devblogs.nvidia.com/efficient-matrix-transpose-cuda-cc/
+Ref: [https://devblogs.nvidia.com/efficient-matrix-transpose-cuda-cc/]
 
