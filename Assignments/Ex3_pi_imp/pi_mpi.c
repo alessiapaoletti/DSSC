@@ -32,7 +32,7 @@ int main( int argc, char * argv[] ){
   for (i = rank + 1; i <= N; i += npes) {
 	    x = h * (i - 0.5);
 	    loc_sum += 4.0 / (1.0 + x*x);
-	}
+  }
   loc_sum = loc_sum*h;
 
   MPI_Reduce(&loc_sum, &tot_sum, 1, MPI_DOUBLE , MPI_SUM, npes-1, MPI_COMM_WORLD) ;
@@ -42,8 +42,8 @@ int main( int argc, char * argv[] ){
   	MPI_Send(&tot_sum , 1, MPI_DOUBLE ,0, 101,MPI_COMM_WORLD);
 
   if(rank == 0) {
-    MPI_Recv(&tot_sum, 1,MPI_DOUBLE, npes-1, 101, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-    printf("res = %lf \t time = %lf \n",tot_sum,end_time -start_time);
+  	MPI_Recv(&tot_sum, 1,MPI_DOUBLE, npes-1, 101, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+	printf("res = %lf \t time = %lf \n",tot_sum,end_time -start_time);
   }
 
   MPI_Finalize();
