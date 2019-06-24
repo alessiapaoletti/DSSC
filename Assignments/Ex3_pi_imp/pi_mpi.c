@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &npes);
 
-  double tstart = MPI_Wtime();
+  double start_time = MPI_Wtime();
 
   long int start = N / npes * rank;
   long int end;
@@ -32,13 +32,13 @@ int main(int argc, char *argv[]) {
   }
 
   MPI_Reduce(&local, &global, 1, MPI_DOUBLE, MPI_SUM, npes - 1, MPI_COMM_WORLD);
-  double tend = MPI_Wtime();
+  double end_time = MPI_Wtime();
 
   if (rank == npes - 1)
     MPI_Send(&global, 1, MPI_DOUBLE, 0, 101, MPI_COMM_WORLD);
   if (rank == 0) {
     MPI_Recv(&global, 1, MPI_DOUBLE, npes - 1, 101, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-    printf("res = %f \t time = %f  \n", h * global * 4, tend - tstart);
+    printf("res = %f \t time = %f  \n", h * global * 4, end_time - start_time);
   }
 
   MPI_Finalize();
