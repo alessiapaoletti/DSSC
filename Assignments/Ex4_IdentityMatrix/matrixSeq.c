@@ -62,14 +62,16 @@ int main(int argc, char *argv[]) {
       nloc = N/npes;
       rest = N%npes;
       if (i<rest) nloc++;
+      
       MPI_Recv(mat, nloc*N, MPI_DOUBLE, i, 101, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+      
       if (N<10) print_matrix(mat,nloc,N);
       else file_print_matrix(mat,nloc,N,fp);
     }
     if (N>10) fclose(fp);
-  } else {
-    MPI_Send(mat, nloc*N, MPI_DOUBLE,root, 101,MPI_COMM_WORLD);
-  }
+  
+  } else 
+      MPI_Send(mat, nloc*N, MPI_DOUBLE,root, 101,MPI_COMM_WORLD);
 
   free(mat);
   MPI_Finalize();
