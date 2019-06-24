@@ -1,5 +1,4 @@
-SRC = sum.c \
-			vectorsum.c
+SRC = vectorsum.c
 
 CXX = mpicc
 CXXFLAGS = -Wall -Wextra
