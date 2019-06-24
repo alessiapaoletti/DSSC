@@ -1,4 +1,0 @@
-The codes implement the "ring sum"  exchaning a vector of elemnts accross the processes (vectorsum.c). 
-
-To compile use the Makefile.
-In the vector version the dimension of the vector can be passed as a parameter (the default size is 4). 
